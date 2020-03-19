@@ -16,6 +16,8 @@ message.channel.send(randomAnswer);
 client.on('message', message => {
   if (message.content.includes('tech tip')) {
     message.react('🐀')
+  } else if (message.content.includes('Tech tip')) {
+   message.react('🐀')
   }
 });
 
