@@ -22,6 +22,26 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+if (message.content.includes('.help'))
+ const helpEmbed = new Discord.MessageEmbed()
+	.setColor('#0099ff')
+	.setTitle('linusbot - Help')
+	.setAuthor('linus sebastian', 'https://pbs.twimg.com/profile_images/1219823572836810752/arymiUb8_400x400.jpg')
+	.setDescription('hello this is linus today i will show you how to use linusbot!!!!!')
+	.setThumbnail('https://pbs.twimg.com/profile_images/1219823572836810752/arymiUb8_400x400.jpg')
+	.addFields(
+		{ name: '.help', value: 'Shows the page you see right now' },
+		{ name: '.techtip', value: 'This feature delivers you a fresh tech tip directly from tech tip factory where our slaves work' },
+		{ name: '.rat', value: 'Cute rat pics' },
+	)
+	.setImage('https://pbs.twimg.com/profile_images/1219823572836810752/arymiUb8_400x400.jpg')
+	.setTimestamp()
+ message.channel.send(helpEmbed);
+  }
+});
+
+
+client.on('message', message => {
 if (message.content.includes('.rat')) {var rats = ["https://pbs.twimg.com/media/ETL3-znUwAA5ISx?format=jpg&name=medium","https://pbs.twimg.com/media/ETLBKzPXYAE0XKo?format=jpg&name=small","https://pbs.twimg.com/media/ETJ8fc_WoAEDCJj?format=jpg&name=900x900","https://pbs.twimg.com/media/ETJTPQNXkAA-dpP?format=jpg&name=small","https://pbs.twimg.com/media/ETJFi1nXQAApeyX?format=jpg&name=900x900","https://pbs.twimg.com/media/ETI3wOBXYAEPHn7?format=jpg&name=small","https://pbs.twimg.com/media/ETIqD8uXQAAKXm3?format=jpg&name=small","https://pbs.twimg.com/media/ETIcVv-XgAEBxh1?format=jpg&name=large","https://pbs.twimg.com/media/ETIOjBuWsAEkPUE?format=jpg&name=medium","https://pbs.twimg.com/media/ESfdWBoXYAEoPJ7?format=jpg&name=small","https://pbs.twimg.com/media/ESfPl6SXYAEcax4?format=jpg&name=small","https://pbs.twimg.com/media/ESfB4jlWkAA9Y7X?format=jpg&name=small","https://pbs.twimg.com/media/ESe0JhCWkAQ1HNN?format=jpg&name=small","https://pbs.twimg.com/media/ESemaLzWAAE9F9Q?format=jpg&name=900x900","https://pbs.twimg.com/media/ESeYrwJWkAEwKGo?format=jpg&name=small","https://pbs.twimg.com/media/ESeK_ncXkAMF5fx?format=jpg&name=large","https://pbs.twimg.com/media/ESd9RNqWkAEQlC1?format=jpg&name=900x900","https://pbs.twimg.com/media/ESdvdfjWsAEihbs?format=jpg&name=small","https://pbs.twimg.com/media/ESdhy-OXsAEQEiG?format=jpg&name=small","https://pbs.twimg.com/media/ESdUBYCXsAkPO6I?format=jpg&name=medium","https://pbs.twimg.com/media/EScqz2JXcAMLF5i?format=jpg&name=small","https://pbs.twimg.com/media/ESbYYfoWkAENqLo?format=jpg&name=small","https://pbs.twimg.com/media/ESavPGMU8AIRrmB?format=jpg&name=small","https://pbs.twimg.com/media/ESZ4SDHU0AI0jzu?format=jpg&name=900x900","https://pbs.twimg.com/media/ESZc1LGWoAAWC1S?format=jpg&name=large","https://pbs.twimg.com/media/ESYzm6LWsAIQrvv?format=jpg&name=small","https://pbs.twimg.com/media/ESYl6rPXcAE4NJp?format=jpg&name=360x360","https://pbs.twimg.com/media/ESYYHkXXQAEuhA7?format=jpg&name=medium","https://pbs.twimg.com/media/ESYKdiVWoAAPlD2?format=jpg&name=small","https://pbs.twimg.com/media/ESX8sIoXcBQY2HP?format=jpg&name=small","https://pbs.twimg.com/media/ESXu69DXsAECtlu?format=jpg&name=900x900","https://pbs.twimg.com/media/ESXhQdIXkAAUUnM?format=jpg&name=small","https://pbs.twimg.com/media/ESXTdiUXYAA-KXz?format=jpg&name=small","https://pbs.twimg.com/media/ESXFtP-WsAAkWnY?format=jpg&name=small","https://pbs.twimg.com/media/ESW4BvZWAAAwjQl?format=jpg&name=900x900","https://pbs.twimg.com/media/ESWqQfJX0AA_WKJ?format=jpg&name=small","https://pbs.twimg.com/media/ESWclVqWAAAlqc0?format=jpg&name=small","https://pbs.twimg.com/media/ESWOz51X0AEdgL4?format=jpg&name=900x900","https://pbs.twimg.com/media/ESWBFVsXcAAZqEO?format=jpg&name=small","https://pbs.twimg.com/media/ESVzTzaWsAc_VCY?format=jpg&name=small","https://pbs.twimg.com/media/ESVlnqYWoAIctDx?format=jpg&name=small"]
 var rat = rats[Math.floor(Math.random() * rats.length)];
 
