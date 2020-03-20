@@ -37,4 +37,12 @@ message.channel.send(ball);
   }
 });
 
+client.on('message', message => {
+if (message.content.includes('.raccoon')) {var raccoons = ["https://pbs.twimg.com/media/ETgsP8uXYAA_zpS?format=jpg&name=small","https://pbs.twimg.com/media/ETg57iWWAAAIAIf?format=jpg&name=small","https://pbs.twimg.com/media/EThHoYDWkAEh4o0?format=jpg&name=small","https://pbs.twimg.com/media/ETgedBSXQAA6MU1?format=jpg&name=small","https://pbs.twimg.com/media/ETgQwL2XYAIztqS?format=jpg&name=small","https://pbs.twimg.com/media/ETgDA9GWsAsROoU?format=jpg&name=small","https://pbs.twimg.com/media/ETf1SihWkAI0sw9?format=jpg&name=small","https://pbs.twimg.com/media/ETfnkhIWAAAlZqS?format=jpg&name=small","https://pbs.twimg.com/media/ETfZ1WSWsAEedtr?format=jpg&name=small","https://pbs.twimg.com/media/ETfMJUzX0Ac9LPT?format=jpg&name=small","https://pbs.twimg.com/media/ETe-Z_8WkAAiwK6?format=jpg&name=small","https://pbs.twimg.com/media/ETewqj6XsAMsBfW?format=jpg&name=small","https://pbs.twimg.com/media/ETei5esWsAUHWXP?format=jpg&name=small","https://pbs.twimg.com/media/ETeVJ1AXQAA7n2J?format=jpg&name=small","https://pbs.twimg.com/media/ETeHZ4sXkAUNmtI?format=jpg&name=small","https://pbs.twimg.com/media/ETd5pY3XYAUaEsQ?format=jpg&name=small","https://pbs.twimg.com/media/ETdr45FXgAAbOer?format=jpg&name=small","https://pbs.twimg.com/media/ETdeKA-XkAArVvO?format=jpg&name=small","https://pbs.twimg.com/media/ETdQagDXkAEOAI5?format=jpg&name=small","https://pbs.twimg.com/media/ETc08frXQAAggjd?format=jpg&name=small","https://pbs.twimg.com/media/ETcnMjMWkAAfZvf?format=jpg&name=small","https://pbs.twimg.com/media/ETcZd6tWAAERuB9?format=jpg&name=small","https://pbs.twimg.com/media/ETcLxOsXYAE9T6K?format=jpg&name=small"]
+var raccoon = raccoons[Math.floor(Math.random() * raccoons.length)];
+
+message.channel.send(raccoon);
+  }
+});
+
 client.login('insert token here');
