@@ -46,4 +46,10 @@ message.channel.send(raccoon);
   }
 });
 
+client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'hello');
+  if (!channel) return;
+  channel.send(`welcome to hell ${member}`);
+});
+
 client.login('insert token here');
